@@ -1,4 +1,4 @@
-<form [formGroup]="itemForm" (submit)="itemForm.valid && submit()">
+<form class="mb-3" [formGroup]="itemForm" (submit)="itemForm.valid && submit()">
   <input class="form-control mb-3" type="text" placeholder="id" formControlName="id">
   <input class="form-control mb-3" type="text" placeholder="name" formControlName="name">
   <button class="btn btn-outline-primary" type="submit">Send</button>

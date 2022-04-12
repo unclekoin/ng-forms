@@ -1,5 +1,8 @@
 <div class="container p-5">
 <!--  <app-form-group></app-form-group>-->
 <!--  <app-form-builder></app-form-builder>-->
-  <app-create-page></app-create-page>
+<!--  <app-create-page></app-create-page>-->
+  <app-own-ng-model [(ngModel)]="appState" (ngModelChange)="handleChange()"></app-own-ng-model>
+  <hr>
+  <div>appState: {{ appState }}</div>
 </div>

@@ -1,0 +1,4 @@
+<div class="btn-group">
+  <button class="btn btn-outline-primary" [class.btn-danger]="state === 'on'" (click)="setState('on')">On</button>
+  <button class="btn btn-outline-primary" [class.btn-danger]="state === 'off'" (click)="setState('off')">Off</button>
+</div>

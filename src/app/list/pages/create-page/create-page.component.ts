@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-page.component.scss']
 })
 export class CreatePageComponent implements OnInit {
+  public Item: any;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public saveItem(value: any) {
+    this.Item = value;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -13,6 +13,7 @@ import {
 })
 export class ItemFormComponent implements OnInit {
   public itemForm!: FormGroup;
+  @Output() public save = new EventEmitter();
 
   constructor(private fb: FormBuilder) { }
 
@@ -29,6 +30,8 @@ export class ItemFormComponent implements OnInit {
 
   public submit() {
     console.log('submit:', this.itemForm.value);
+    this.save.emit((this.itemForm.value));
+    this.itemForm.reset();
   }
 
 }
